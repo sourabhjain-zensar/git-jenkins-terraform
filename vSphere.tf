@@ -10,8 +10,17 @@ provider "vsphere" {
 }
 
 # Create a virtual machine within the folder
-resource "vsphere_virtual_machine" "prodapp1" {
-  name   = "prodapp1"
+resource "vsphere_virtual_machine" "prodapp10" {
+  name   = "prodapp10"
   vcpu   = 2
   memory = 4096
+  
+  network_interface {
+   label = "App-pg"
+  }
+ 
+ disk {
+    size = "1"
+    datastore = "Datastore"
+  }
 }
