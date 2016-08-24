@@ -14,10 +14,10 @@ resource "vsphere_virtual_machine" "prodapp10" {
   name   = "prodapp10"
   vcpu   = 2
   memory = 4096
-  resource_pool = "Zencloud/Performance/10.44.120.61"
+  resource_pool = "Performance"
   
   network_interface {
-   label = "App-pg"
+   label = "VM Network"
   }
  
  disk {
