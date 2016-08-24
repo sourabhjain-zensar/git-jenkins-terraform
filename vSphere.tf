@@ -14,13 +14,4 @@ resource "vsphere_virtual_machine" "prodapp1" {
   name   = "prodapp1"
   vcpu   = 2
   memory = 4096
-
-  network_interface {
-    label = "App-pg"
-  }
-
-  disk {
-    size = "1"
-        datastore = "Datastore"
-  }
 }
