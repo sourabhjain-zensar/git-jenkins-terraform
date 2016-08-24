@@ -10,8 +10,8 @@ provider "vsphere" {
 }
 
 # Create a virtual machine within the folder
-resource "vsphere_virtual_machine" "prodapp" {
-  name   = "prodapp"
+resource "vsphere_virtual_machine" "prodapp1" {
+  name   = "prodapp1"
   vcpu   = 2
   memory = 4096
 
